@@ -1,0 +1,20 @@
+@use 'reset';
+@use 'colors';
+
+$header-font: Playfair, serif;
+$body-font: Roboto, sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body-font;
+  background-color: colors.$bg;
+}
+
+p {
+  font-weight: 600;
+}
