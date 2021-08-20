@@ -140,12 +140,193 @@ table {
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: Playfair, serif;
   background-color: #fff3df;
+  color: #c05b7c;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  position: fixed;
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 1rem;
+}
+nav ul li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+section .hero {
+  width: 800px;
+  height: 640px;
 }
 
 p {
   font-weight: 600;
+}
+
+.biggest {
+  font-size: 144px;
+  display: block;
+}
+
+.sect {
+  padding: 13.3em 3.81em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.sect div {
+  margin-top: 3em;
+}
+
+.name {
+  font-size: 5.3em;
+  display: block;
+}
+
+.big-btn {
+  font-family: Roboto, sans-serif;
+  border-radius: 14px;
+  padding: 0.8em 2em;
+  display: block;
+  width: auto;
+  text-align: center;
+  background-color: #69ddd3;
+  font-size: 3.75em;
+  color: #fff3df;
+  margin-top: 1.5em;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+.big-btn:hover {
+  background-color: #29b7aa;
+}
+
+.aspire {
+  font-size: 5.3em;
+}
+
+.career, .intern {
+  font-size: 1.3em;
+  display: block;
+}
+
+.intern {
+  text-decoration: none;
+  color: #1da1f2;
+}
+.intern img {
+  margin-bottom: 20px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.intern:hover {
+  text-decoration: underline;
+}
+
+.dscroll, .uscroll {
+  text-align: center;
+  display: block;
+  transform: translateY(-100px);
+}
+.dscroll img, .uscroll img {
+  width: 60;
+  height: 34;
+  transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dscroll img:hover, .uscroll img:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.uscroll {
+  transform: rotateX(180deg);
+}
+.uscroll img:hover {
+  transform: translateY(10px);
+}
+
+#myInterest p {
+  font-size: 5em;
+  line-height: 1.2;
+}
+
+#colors {
+  display: block;
+  color: #69ddd3;
+}
+
+#animation {
+  display: block;
+  animation-name: breathe;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  direction: alternate;
+}
+
+@keyframes breathe {
+  0% {
+    color: #c05b7c;
+  }
+  15% {
+    color: #cd396a;
+  }
+  45% {
+    color: #6153cc;
+  }
+  85% {
+    color: #2274a5;
+  }
+  100% {
+    color: #cd396a;
+  }
+}
+#solving {
+  display: block;
+  color: #0e131f;
+}
+
+.final {
+  display: flex;
+  direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.final p {
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+  padding: 0 8em;
 }
 
 /*# sourceMappingURL=style.css.map */
