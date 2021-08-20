@@ -176,6 +176,7 @@ section .hero {
   section .hero {
     width: 490px;
     height: 362px;
+    margin-top: 0;
   }
 }
 
@@ -219,7 +220,7 @@ p {
 }
 @media screen and (max-width: 630px) {
   .sect div {
-    margin-top: 1.5em;
+    margin-top: 0;
   }
 }
 
