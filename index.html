@@ -8,18 +8,77 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Roboto:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" href="./public/images/Coding.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
   </head>
   <body>
-    <div>
-      <div class="name"></div>
-      <div class="myDreams"></div>
-      <div class="myInterest"></div>
-      <div class="contactMe"></div>
+    <div class="container">
+      <section id="name">
+        <div class="sect">
+          <div>
+            <p>
+              <span class="biggest">Hi,</span>
+              <span style="font-size: 5em">my name is</span>
+              <span class="name">Temitope Pinheiro</span>
+            </p>
+            <a class="big-btn" href="./public/Temitope-pinheiro_resume.pdf"
+              >View my resume</a
+            >
+          </div>
+          <img class="hero" src="/public/images/Coding.png" />
+        </div>
+        <a class="dscroll" href="#myDreams"
+          ><img src="./public/images/Polygon 1.png"
+        /></a>
+      </section>
+      <section id="myDreams">
+        <div class="sect">
+          <div>
+            <p class="aspire">
+              I am an aspiring
+              <span class="career">Frontend Developer</span> currently part of
+
+              <a class="intern" href="https://internship.zuri.team/"
+                ><img src="https://hng.tech/img/fav.png" />HNG Internship 8</a
+              >
+            </p>
+          </div>
+          <img class="hero" src="/public/images/Customize.png" />
+        </div>
+        <a class="dscroll" href="#myInterest"
+          ><img src="./public/images/Polygon 1.png"
+        /></a>
+      </section>
+      <section id="myInterest">
+        <div class="sect">
+          <div>
+            <p>
+              I love <span id="colors">Colors,</span>
+              <span id="animation">Animation,</span
+              ><span id="solving">Solving Complex Problems</span>
+            </p>
+          </div>
+          <img class="hero" src="/public/images/Build.png" />
+        </div>
+        <a class="dscroll" href="#contactMe"
+          ><img src="./public/images/Polygon 1.png"
+        /></a>
+      </section>
+      <section id="contactMe">
+        <div class="final">
+          <img class="hero" src="./public/images/Messages.png" />
+          <p>To find out more fun stuff about me you can reach me at</p>
+          <a href="">Gmail</a>
+          <a href="">Twitter</a>
+          <a href="">Github</a>
+        </div>
+        <a class="uscroll" href="#name"
+          ><img src="./public/images/Polygon 1.png"
+        /></a>
+      </section>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
