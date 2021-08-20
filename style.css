@@ -213,6 +213,7 @@ p {
     align-content: center;
     justify-content: center;
     text-align: center;
+    padding: 0;
   }
 }
 .sect div {
@@ -242,6 +243,11 @@ p {
   margin-top: 1.5em;
   text-decoration: none;
   transition: all 150ms ease-in-out;
+}
+@media screen and (max-width: 630px) {
+  .big-btn {
+    margin-top: 0;
+  }
 }
 .big-btn:hover {
   background-color: #29b7aa;
@@ -368,6 +374,11 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 100px;
+}
+@media screen and (max-width: 630px) {
+  .final {
+    margin-top: 0;
+  }
 }
 .final p {
   width: 100%;
