@@ -140,7 +140,7 @@ table {
 }
 
 body {
-  font-family: Playfair, serif;
+  font-family: Roboto, sans-serif;
   background-color: #fff3df;
   color: #c05b7c;
   height: 100vh;
@@ -154,25 +154,10 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
-
-nav {
-  width: 100%;
-  height: 60px;
-  background-color: transparent;
-  position: fixed;
-  z-index: 1;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
-nav ul li {
-  margin: 0 1rem;
-}
-nav ul li a {
-  font-size: 1.3rem;
-  text-decoration: none;
+@media (max-width: 630px) {
+  .container {
+    font-size: 0.5em;
+  }
 }
 
 section {
@@ -180,17 +165,37 @@ section {
   scroll-snap-align: center;
 }
 section .hero {
-  width: 800px;
-  height: 640px;
+  width: calc(100vw / 800px);
+  height: calc(100vw / 640px);
+  max-width: 800px;
+  max-height: 640px;
+  min-height: 490px;
+  min-width: 362px;
+}
+@media (max-width: 630px) {
+  section .hero {
+    width: 490px;
+    height: 362px;
+  }
 }
 
 p {
   font-weight: 600;
 }
+@media (max-width: 630px) {
+  p {
+    font-weight: 400;
+  }
+}
 
 .biggest {
-  font-size: 144px;
+  font-size: calc(80px + (144 - 80) * ((100vw - 450px) / (1600 - 450)));
   display: block;
+}
+@media screen and (max-width: 630px) {
+  .biggest {
+    font-size: 80px;
+  }
 }
 
 .sect {
@@ -199,24 +204,39 @@ p {
   justify-content: space-between;
   width: 100%;
 }
+@media screen and (max-width: 630px) {
+  .sect {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
 .sect div {
   margin-top: 3em;
 }
+@media screen and (max-width: 630px) {
+  .sect div {
+    margin-top: 1.5em;
+  }
+}
 
 .name {
-  font-size: 5.3em;
+  font-size: calc(42px + (84 - 42) * ((100vw - 450px) / (1600 - 450)));
   display: block;
 }
 
 .big-btn {
   font-family: Roboto, sans-serif;
   border-radius: 14px;
-  padding: 0.8em 2em;
+  padding: calc(6.4px + (12.8 - 6.4) * ((100vw - 450px) / (1600 - 450))) calc(16px + (32 - 16) * ((100vw - 450px) / (1600 - 450)));
   display: block;
   width: auto;
   text-align: center;
   background-color: #69ddd3;
-  font-size: 3.75em;
+  font-size: calc(25px + (50 - 25) * ((100vw - 450px) / (1600 - 450)));
   color: #fff3df;
   margin-top: 1.5em;
   text-decoration: none;
@@ -227,11 +247,15 @@ p {
 }
 
 .aspire {
-  font-size: 5.3em;
+  font-size: calc(42px + (84 - 42) * ((100vw - 450px) / (1600 - 450)));
+}
+
+.aspire2 {
+  font-size: calc(42px + (84 - 42) * ((100vw - 450px) / (1600 - 450)));
 }
 
 .career, .intern {
-  font-size: 1.3em;
+  font-size: 1.1em;
   display: block;
 }
 
@@ -242,8 +266,8 @@ p {
 .intern img {
   margin-bottom: 20px;
   display: inline-block;
-  height: 30px;
-  width: 30px;
+  height: 0.25em;
+  width: 0.25em;
   position: relative;
   top: 0;
   left: 0;
@@ -255,7 +279,7 @@ p {
 .dscroll, .uscroll {
   text-align: center;
   display: block;
-  transform: translateY(-100px);
+  transform: translateY(-125px);
 }
 .dscroll img, .uscroll img {
   width: 60;
@@ -266,12 +290,24 @@ p {
   transform: translateY(-10px);
   cursor: pointer;
 }
+@media screen and (max-width: 630px) {
+  .dscroll, .uscroll {
+    display: none;
+  }
+}
 
 .uscroll {
+  align-self: center;
+  vertical-align: bottom;
   transform: rotateX(180deg);
 }
 .uscroll img:hover {
   transform: translateY(10px);
+}
+@media screen and (max-width: 630px) {
+  .uscroll {
+    display: block;
+  }
 }
 
 #myInterest p {
@@ -287,7 +323,7 @@ p {
 #animation {
   display: block;
   animation-name: breathe;
-  animation-duration: 4000ms;
+  animation-duration: 2000ms;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   direction: alternate;
@@ -315,18 +351,56 @@ p {
   color: #0e131f;
 }
 
+#contactMe {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
 .final {
   display: flex;
   direction: column;
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 .final p {
   width: 100%;
   text-align: center;
-  font-size: 4em;
-  padding: 0 8em;
+  font-size: calc(25px + (50 - 25) * ((100vw - 450px) / (1600 - 450)));
+  padding: 0 2em;
+}
+
+.personalLinks {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.personalLinks a {
+  margin: 0 3em;
+  padding: 1em;
+  border-radius: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.github {
+  background-color: #2a2a2a;
+}
+
+.mail {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

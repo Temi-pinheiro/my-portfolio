@@ -21,7 +21,14 @@
           <div>
             <p>
               <span class="biggest">Hi,</span>
-              <span style="font-size: 5em">my name is</span>
+              <span
+                style="
+                  font-size: calc(
+                    40px + (80 - 40) * ((100vw - 450px) / (1600 - 450))
+                  );
+                "
+                >my name is</span
+              >
               <span class="name">Temitope Pinheiro</span>
             </p>
             <a class="big-btn" href="./public/Temitope-pinheiro_resume.pdf"
@@ -30,9 +37,9 @@
           </div>
           <img class="hero" src="/public/images/Coding.png" />
         </div>
-        <a class="dscroll" href="#myDreams"
+        <!-- <a class="dscroll" href="#myDreams"
           ><img src="./public/images/Polygon 1.png"
-        /></a>
+        /></a> -->
       </section>
       <section id="myDreams">
         <div class="sect">
@@ -48,14 +55,20 @@
           </div>
           <img class="hero" src="/public/images/Customize.png" />
         </div>
-        <a class="dscroll" href="#myInterest"
+        <!-- <a class="dscroll" href="#myInterest"
           ><img src="./public/images/Polygon 1.png"
-        /></a>
+        /></a> -->
       </section>
       <section id="myInterest">
         <div class="sect">
           <div>
-            <p>
+            <p
+              style="
+                font-size: calc(
+                  40px + (80 - 40) * ((100vw - 450px) / (1600 - 450))
+                );
+              "
+            >
               I love <span id="colors">Colors,</span>
               <span id="animation">Animation,</span
               ><span id="solving">Solving Complex Problems</span>
@@ -63,17 +76,28 @@
           </div>
           <img class="hero" src="/public/images/Build.png" />
         </div>
-        <a class="dscroll" href="#contactMe"
+        <!-- <a class="dscroll" href="#contactMe"
           ><img src="./public/images/Polygon 1.png"
-        /></a>
+        /></a> -->
       </section>
       <section id="contactMe">
         <div class="final">
           <img class="hero" src="./public/images/Messages.png" />
           <p>To find out more fun stuff about me you can reach me at</p>
-          <a href="">Gmail</a>
-          <a href="">Twitter</a>
-          <a href="">Github</a>
+          <div class="personalLinks">
+            <a class="mail" href="mailto:temitopepinheiro@gmail.com"
+              ><img
+                width="50"
+                height="50"
+                src="./public/images/logo_gmail_lockup_default_1x_r2.png"
+            /></a>
+            <a class="twitter" href="http://www.twitter.com/dev1nh1o"
+              ><img src="./public/images/twitter.svg"
+            /></a>
+            <a class="github" href="http://www.github.com/Temi-pinheiro"
+              ><img src="./public/images/github.svg"
+            /></a>
+          </div>
         </div>
         <a class="uscroll" href="#name"
           ><img src="./public/images/Polygon 1.png"
