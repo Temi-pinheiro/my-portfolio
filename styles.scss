@@ -174,9 +174,9 @@ body {
 
   .allskills {
     display: flex;
-    direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     // align-content: center;
     // align-items: center;
     height: 616px;
@@ -187,11 +187,34 @@ body {
     //   margin-bottom: 47px;
     //   // margin-top: 10px;
     // }
+    div {
+      div {
+        padding-top: 46px;
+        padding-left: 0;
+        padding-right: 50px;
+      }
+    }
   }
 }
 
 #contact {
   @include helpers.columns;
+
+  .contactme {
+    // align-self: flex-start;
+    display: block;
+    p {
+      text-transform: none;
+      justify-self: center;
+      align-self: center;
+      // margin-top: 10em;
+      font-size: 45px;
+      word-wrap: break-word;
+      max-width: 616px;
+      line-height: 4;
+      font-weight: 500;
+    }
+  }
 
   #github {
     color: colors.$extra-grey;

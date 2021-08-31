@@ -30,7 +30,7 @@ const sect = document.querySelectorAll('section');
 // console.log(sect);
 const abt = document.querySelector('#about');
 
-abt.addEventListener('scroll', () => {
+abt.addEventListener('mouseenter', () => {
   console.log('scrolled');
   const cols = document.querySelectorAll('.aos-init');
   cols.forEach((col) => {

@@ -379,10 +379,15 @@ body {
 }
 #skills .allskills {
   display: flex;
-  direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 616px;
+}
+#skills .allskills div div {
+  padding-top: 46px;
+  padding-left: 0;
+  padding-right: 50px;
 }
 
 #contact {
@@ -417,6 +422,19 @@ body {
   font-size: 45px;
   line-height: 53px;
   max-width: 571px;
+}
+#contact .contactme {
+  display: block;
+}
+#contact .contactme p {
+  text-transform: none;
+  justify-self: center;
+  align-self: center;
+  font-size: 45px;
+  word-wrap: break-word;
+  max-width: 616px;
+  line-height: 4;
+  font-weight: 500;
 }
 #contact #github {
   color: #c2c2c2;
